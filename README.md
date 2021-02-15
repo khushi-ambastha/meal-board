@@ -32,5 +32,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Project dependencies and devDependencies
 1. axios
+   Promise based HTTP client for the browser.
+   Refer below url for more details:
+   https://www.npmjs.com/package/axios 
 2. Vuetify
+   Material design component for Vue.js
+   Refer below url for more details:
+   https://vuetifyjs.com/en/
+
+
 
