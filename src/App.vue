@@ -1,32 +1,48 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar app color="red accent-2" dark>
+      <div class="d-flex align-center">
+        <v-img
+          alt="Meal Board Logo"
+          class="shrink mr-2"
+          contain
+          src="@/assets/meal.png"
+          transition="scale-transition"
+          width="40"
+        />
+      </div>
+
+      <router-link :to="{ name: 'Home' }" class="white--text">
+        <h3>Meal Board</h3>
+      </router-link>
+      <v-spacer></v-spacer>
+      <search-bar />
+    </v-app-bar>
+
+    <v-main>
+      <router-view></router-view>
+    </v-main>
+    <v-footer color="red accent-2" fixed padless>
+      <v-col class="text-center" cols="12">
+        Copyright &copy; {{ new Date().getFullYear() }} —
+        <strong>Meal Board</strong>
+      </v-col>
+    </v-footer>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import SearchBar from "./components/SearchBar.vue";
 
-#nav {
-  padding: 30px;
-}
+export default {
+  name: "App",
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  components: {
+    SearchBar,
+  },
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  data: () => ({
+    //
+  }),
+};
+</script>

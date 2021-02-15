@@ -1,4 +1,11 @@
-# meal-board
+# meal-board - Meal Application with VueJS
+A single‐page web application which allows users to browse the meal recipes. It uses the following open api: https://www.themealdb.com/api.php
+On the Dashboard, it loads random meals. You can also search any meals.
+When the user selects a meal from the search results, the details of that meal show:
+• Name of the dish
+• Image of the dish
+• A List of ingredients including measures
+• Instructions how to prepare the dish
 
 ## Project setup
 ```
@@ -22,3 +29,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Project dependencies and devDependencies
+1. axios
+2. Vuetify
+
